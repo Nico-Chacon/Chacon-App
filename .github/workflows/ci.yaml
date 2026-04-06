@@ -1,12 +1,22 @@
-name: CI
-
 on:
-  push:
-
+  workflow_call:
+    inputs:
+      image-name:
+        description: Nombre de la imagen en Docker Hub
+        required: true
+        type: string
+      image-tag:
+        description: Etiqueta de versión
+        required: true
+        type: string
+    secrets:
+      DOCKER_USERNAME:
+        required: true
+      DOCKER_PASSWORD:
+        required: true
 jobs:
   deploy:
     uses: Nico-Chacon/Chacon-SharedWorkflows/.github/workflows/deploy-api.yaml@pipeTest
-    
     with:
       image-name: mi-api-academica
       image-tag: v1.0.0
