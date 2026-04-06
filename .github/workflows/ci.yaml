@@ -5,9 +5,10 @@ on:
 
 jobs:
   deploy:
-    uses: Nico-Chacon/Chacon-SharedWorkflows/.github/workflows/deploy-api.yaml@pipeTest
+    uses: Nico-Chacon/Chacon-SharedWorkflows/.github/workflows/subir-api.yaml@main
+    with:
+      image-name: mi-api-academica
+      image-tag: v1.0.0
     secrets:
       DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
       DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-
-#Ignore this text
