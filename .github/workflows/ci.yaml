@@ -1,19 +1,8 @@
+name: CI
+
 on:
-  workflow_call:
-    inputs:
-      image-name:
-        description: Nombre de la imagen en Docker Hub
-        required: true
-        type: string
-      image-tag:
-        description: Etiqueta de versión
-        required: true
-        type: string
-    secrets:
-      DOCKER_USERNAME:
-        required: true
-      DOCKER_PASSWORD:
-        required: true
+  push:
+
 jobs:
   deploy:
     uses: Nico-Chacon/Chacon-SharedWorkflows/.github/workflows/deploy-api.yaml@pipeTest
@@ -23,5 +12,3 @@ jobs:
     secrets:
       DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
       DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-
-#ignore text
