@@ -5,7 +5,7 @@ on:
 
 jobs:
   deploy:
-    uses: Nico-Chacon/Chacon-SharedWorkflows/.github/workflows/deploy-api.yaml@main
+    uses: Chacon-SharedWorkflows/.github/workflows/deploy-api.yaml
     with:
       image-name: mi-api-academica
       image-tag: v1.0.0
