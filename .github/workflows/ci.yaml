@@ -1,11 +1,11 @@
 name: CI
 
-on: [push]
+on:
+  push:
+
 jobs:
   deploy:
-    uses: {owner}/MiProyecto-SharedWorkflows/.github/workflows/deploy-api.yaml@main
+    uses: Nico-Chacon/Chacon-SharedWorkflows/.github/workflows/deploy-api.yaml@main
     secrets:
       DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
       DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-
-#Texto_de_modificacion 1
