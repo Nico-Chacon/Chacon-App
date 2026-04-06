@@ -6,6 +6,8 @@ on:
 jobs:
   deploy:
     uses: Nico-Chacon/Chacon-SharedWorkflows/.github/workflows/deploy-api.yaml@pipeTest
+    with: {}
     secrets:
       DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
       DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+
