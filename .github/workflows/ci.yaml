@@ -1,4 +1,3 @@
-git push origin main
 name: CI
 
 on:
