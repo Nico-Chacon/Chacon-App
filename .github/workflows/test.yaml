@@ -1,0 +1,21 @@
+name: Test Pipeline
+
+on:
+  push:
+    branches-ignore:
+      - main
+    tags-ignore:
+      - '*'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar código
+        uses: actions/checkout@v4
+
+      - name: Instalar dependencias
+        run: npm install
+
+      - name: Ejecutar pruebas
+        run: npm test
